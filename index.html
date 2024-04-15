@@ -10,11 +10,30 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    
+    <script
+      src="https://kit.fontawesome.com/8002d83514.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="style.css">
+
   </head>
   <body>
+
+
     <nav class="navbar" style="background-color: #e3f2fd">
       <div class="container-fluid">
-        <a class="navbar-brand mx-5">Navbar</a>
+        <a class="navbar-brand mx-5">WeatherVerse</a>
+
+
         <form onsubmit="checkWeather(); return false;" class="d-flex" role="search">
           <input
             id="city-search"
@@ -39,18 +58,19 @@
         <div class="col">
           <div class="card mx-auto mt-5" style="width: 18rem">
             <img
+
+              id = weather-icon
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi7VmUn-Ymurow_FZpYX9hZLVNTKkNiPvNug&usqp=CAU"
               class="card-img-top"
-              alt="..."
+              alt="weather icon"
             />
             <div class="card-body">
               <h1 id="temp" class="card-title">23°<sup>c</sup></h1>
-              <p class="card-text">
-                Some quick <i class="fa-solid fa-temperature-list"></i>example
-                text to build on the card title and make up the bulk of the
-                card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <h6 id = "weather-description"class="card-text">
+                cloudly
+              </h6>
+              <h3 id = "city" > Delhi
+                </h3>
             </div>
           </div>
         </div>
@@ -59,7 +79,7 @@
           <div class="container text-center">
             <div class="row">
               <div class="col">
-                <div class="card text-bg-info mb-3" style="max-width: 18rem">
+                <div id  =" main-card" class="card text-bg-info mb-3" style="max-width: 18rem">
                   <div class="card-header">
                     <i class="fa-solid fa-temperature-high"></i
                     >&nbsp;&nbsp;FEELS LIKE
@@ -97,27 +117,27 @@
             <div class="row">
               <div class="col">
                 <div class="card text-bg-info mb-3" style="max-width: 18rem">
-                  <div class="card-header">Header</div>
+                  <div class="card-header">HUMIDITY</div>
                   <div class="card-body">
-                    <h5 class="card-title">Info card title</h5>
+                    <h5  ID = "HUMIDITY" class="card-title">Info card title</h5>
                   </div>
                 </div>
               </div>
 
               <div class="col">
                 <div class="card text-bg-info mb-3" style="max-width: 18rem">
-                  <div class="card-header">Header</div>
+                  <div class="card-header">PRESSURE</div>
                   <div class="card-body">
-                    <h5 class="card-title">Info card title</h5>
+                    <h5 ID ="PRESSURE"class="card-title">Info </h5>
                   </div>
                 </div>
               </div>
 
               <div class="col">
                 <div class="card text-bg-info mb-3" style="max-width: 18rem">
-                  <div class="card-header">Header</div>
+                  <div class="card-header">VISIBILITY</div>
                   <div class="card-body">
-                    <h5 class="card-title">Info card title</h5>
+                    <h5 id ="visibility" class="card-title">Info </h5>
                   </div>
                 </div>
               </div>
@@ -127,39 +147,8 @@
       </div>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-    ></script>
+    
 
-    <script
-      src="https://kit.fontawesome.com/8002d83514.js"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      const apikey = "f8b372ea7fa00eda1d0c6514c74ba962";
-      apiURL =
-        `https://api.openweathermap.org/data/2.5/weather?units=metric&q=`;
-
-
-      async function checkWeather()
-      {
-        city = document.getElementById("city-search").value;
-        console.log(city);
-        const response = await fetch(apiURL+document.getElementById("city-search").value+`&appid=${apikey}`)
-        var data = await response.json();
-        console.log(data);
-
-          console.log(data);
-
-          document.querySelector("#temp").innerHTML= Math.round(data.main.temp);
-          document.querySelector("#feels-like").innerHTML =Math.round (data.main.feels_like);
-          document.querySelector("#max-temp").innerHTML = (data.main.temp_max);
-          document.querySelector("#min-temp").innerHTML = (data.main.temp_min);
-
-      }
-
-    </script>
+    <script src = "main.js"></script>
   </body>
 </html>

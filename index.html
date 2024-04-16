@@ -17,24 +17,23 @@
       crossorigin="anonymous"
     ></script>
 
-    
     <script
       src="https://kit.fontawesome.com/8002d83514.js"
       crossorigin="anonymous"
     ></script>
 
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
-
     <nav class="navbar" style="background-color: #e3f2fd">
       <div class="container-fluid">
         <a class="navbar-brand mx-5">WeatherVerse</a>
 
-
-        <form onsubmit="checkWeather(); return false;" class="d-flex" role="search">
+        <form
+          onsubmit="checkWeather(); return false;"
+          class="d-flex"
+          role="search"
+        >
           <input
             id="city-search"
             class="form-control me-2"
@@ -56,21 +55,19 @@
     <div class="container text-center mx-5 my-5">
       <div class="row">
         <div class="col">
-          <div class="card mx-auto mt-5" style="width: 18rem">
+          <div class="card mx-auto" style="width: 17rem">
             <img
-
-              id = weather-icon
+              id="weather-icon"
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi7VmUn-Ymurow_FZpYX9hZLVNTKkNiPvNug&usqp=CAU"
               class="card-img-top"
               alt="weather icon"
             />
             <div class="card-body">
-              <h1 id="temp" class="card-title">23°<sup>c</sup></h1>
-              <h6 id = "weather-description"class="card-text">
-                cloudly
-              </h6>
-              <h3 id = "city" > Delhi
-                </h3>
+              <h1 id="temp" class="card-title">&nbsp;&nbsp;23°<sup>c</sup></h1>
+              <h6 id="weather-description" class="card-text">cloudly</h6>
+              <br />
+              <h3 id="city">Delhi</h3>
+              <h6 id = "date">17/04/2024</h6>
             </div>
           </div>
         </div>
@@ -79,14 +76,18 @@
           <div class="container text-center">
             <div class="row">
               <div class="col">
-                <div id  =" main-card" class="card text-bg-info mb-3" style="max-width: 18rem">
+                <div
+                  id=" main-card"
+                  class="card text-bg-info mb-3"
+                  style="max-width: 18rem"
+                >
                   <div class="card-header">
                     <i class="fa-solid fa-temperature-high"></i
                     >&nbsp;&nbsp;FEELS LIKE
                   </div>
                   <div class="card-body">
                     <h5 id="feels-like" class="card-title">
-                      45<i class="fa-solid fa-temperature-list"></i>
+                      22°<sup>c</sup><i class="fa-solid fa-temperature-list"></i>
                     </h5>
                   </div>
                 </div>
@@ -98,7 +99,7 @@
                     <i class="fa-solid fa-temperature-arrow-up"></i>MAX TEMP
                   </div>
                   <div class="card-body">
-                    <h5 id="max-temp" class="card-title">Info card title</h5>
+                    <h5 id="max-temp" class="card-title">28°<sup>c</sup></h5>
                   </div>
                 </div>
               </div>
@@ -109,7 +110,7 @@
                     <i class="fa-solid fa-temperature-arrow-down"></i>MIN TEMP
                   </div>
                   <div class="card-body">
-                    <h5 id="min-temp" class="card-title">Info card title</h5>
+                    <h5 id="min-temp" class="card-title">19°<sup>c</sup></h5>
                   </div>
                 </div>
               </div>
@@ -119,7 +120,7 @@
                 <div class="card text-bg-info mb-3" style="max-width: 18rem">
                   <div class="card-header">HUMIDITY</div>
                   <div class="card-body">
-                    <h5  ID = "HUMIDITY" class="card-title">Info card title</h5>
+                    <h5 id="HUMIDITY" class="card-title">45%</h5>
                   </div>
                 </div>
               </div>
@@ -128,16 +129,40 @@
                 <div class="card text-bg-info mb-3" style="max-width: 18rem">
                   <div class="card-header">PRESSURE</div>
                   <div class="card-body">
-                    <h5 ID ="PRESSURE"class="card-title">Info </h5>
+                    <h5 id="PRESSURE" class="card-title">1001 hPa</h5>
                   </div>
                 </div>
               </div>
 
               <div class="col">
                 <div class="card text-bg-info mb-3" style="max-width: 18rem">
-                  <div class="card-header">VISIBILITY</div>
+                  <div class="card-header">WIND SPEED</div>
                   <div class="card-body">
-                    <h5 id ="visibility" class="card-title">Info </h5>
+                    <h5 id="wind-speed" class="card-title">15 km/h</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="card" style="width: 38rem">
+                  <img
+                    id="sun"
+                    src="images/sunrise sunset.jpg"
+                    class="card-img-top"
+                    alt="sunrise sunset"
+                  />
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col">
+                        <h1 id="sunrise">5:00</h1>
+                      </div>
+                      <div class="col"></div>
+                      <div  class="col">
+                        <h1 id="sunset">18:00</h1>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -147,8 +172,6 @@
       </div>
     </div>
 
-    
-
-    <script src = "main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
